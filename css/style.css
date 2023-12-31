@@ -1,6 +1,37 @@
-body {
-  background-color: antiquewhite;
+@font-face {
+  font-family: myfont;
+  src: url(../assets/fonts/Retro\ Gaming.ttf);
 }
+
+* {
+  font-family: "myfont", sans-serif;
+}
+
+h1 {
+  font-weight: bold;
+  color: #ffff40db;
+  font-size: 48px;
+}
+.gamename {
+  background-color: rgb(71, 71, 71);
+  border: 5px;
+  border-radius: 5%;
+}
+
+body {
+  background-color: rgb(32, 32, 32);
+}
+
+a {
+  color: whitesmoke;
+}
+h2 {
+  color: whitesmoke;
+}
+h3 {
+  color: whitesmoke;
+}
+
 .gamename {
   display: flex;
   justify-content: center;
@@ -9,7 +40,11 @@ body {
 
 .scoreboard {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+}
+.scoreboard p {
+  font-size: 28px;
+  color: whitesmoke;
 }
 
 .player {
@@ -18,16 +53,7 @@ body {
   align-items: center;
   justify-content: space-evenly;
 }
-.player input {
-  width: 15px; /* Set width */
-  padding: 10px; /* Add padding */
-  font-size: 24px; /* Set font size */
-  border: 0px solid #ccc; /* Add border */
-  border-radius: 5px; /* Add border radius */
-  background-color: transparent;
 
-  align-items: center;
-}
 /*Rules*/
 
 .rules {
@@ -43,7 +69,10 @@ body {
 }
 
 .weap {
-  background-color: gray;
+  background-color: #898989;
+  border: 1px;
+  border-radius: 5%;
+  box-shadow: inset;
 }
 
 .weapon-btn img {
