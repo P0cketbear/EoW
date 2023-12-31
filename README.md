@@ -1,3 +1,3 @@
 # EoW
 
-rock paper scissors but with elements
+rock paper scissors with weapons
