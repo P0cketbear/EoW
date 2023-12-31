@@ -7,40 +7,39 @@ function getComputerChoice() {
 
 function playRound(playerSelect, cpuSelect) {
 
-    let respuesta = "";
     switch (playerSelect) {
         case "Axe":
             if(cpuSelect === "Axe"){
-                return result = "Tie";
+                return respuesta = "Tie";
             };
             if (cpuSelect === "Bow") {
-                return result = "Lose";
+                return respuesta = "Lose";
             }
             if (cpuSelect === "Wand") {
-                return result = "Win";
+                return respuesta = "Win";
             }
             break;
         case "Bow":
             if(cpuSelect === "Axe"){
-                return result = "Win";
+                return respuesta = "Win";
             };
             if (cpuSelect === "Bow") {
-                return result = "Tie";
+                return respuesta = "Tie";
             }
             if (cpuSelect === "Wand") {
-                return result = "Lose";
+                return respuesta = "Lose";
             }
             break;
 
         case "Wand":
             if(cpuSelect === "Axe"){
-                return result = "Lose";
+                return respuesta = "Lose";
             };
             if (cpuSelect === "Bow") {
-                return result = "Win";
+                return respuesta = "Win";
             }
             if (cpuSelect === "Wand") {
-                return result = "Tie";
+                return respuesta = "Tie";
             }            
             break;
     }
@@ -48,8 +47,28 @@ function playRound(playerSelect, cpuSelect) {
     
 }
 
+let playerScore = 0;
+let cpuScore = 0;
 
-let cpuSelect = getComputerChoice();
-let playerSelect = "Axe"
+function game(weapon) {
+    let cpuSelect = getComputerChoice();
+    let playerSelect = weapon;
 
-alert(playRound(playerSelect, cpuSelect))
+    let resultado = playRound(playerSelect, cpuSelect);
+
+    document.getElementById('resultado').innerHTML = resultado;
+
+    switch (resultado) {
+        case 'Win':
+            playerScore++;
+            document.getElementById('player').innerHTML = playerScore;
+            break;
+        case 'Lose':
+            cpuScore++;
+            document.getElementById('cpu').innerHTML = cpuScore;
+            break;
+    }
+}
+
+
+
