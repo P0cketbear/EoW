@@ -40,7 +40,7 @@ h3 {
 
 .scoreboard {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 .scoreboard p {
   font-size: 28px;
