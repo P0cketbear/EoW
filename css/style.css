@@ -14,8 +14,8 @@ h1 {
 }
 .gamename {
   background-color: rgb(71, 71, 71);
-  border: 5px;
-  border-radius: 5%;
+  display: flex;
+  justify-content: center;
 }
 
 body {
@@ -26,25 +26,33 @@ a {
   color: whitesmoke;
 }
 h2 {
-  color: whitesmoke;
+  font-weight: bold;
+  font-size: 36px;
+  color: #ffff40db;
 }
 h3 {
+  font-weight: bold;
+  font-size: 28px;
   color: whitesmoke;
 }
 
-.gamename {
-  display: flex;
-  justify-content: center;
-}
 /*Scoreboard*/
 
 .scoreboard {
+  padding: auto;
+  margin-left: 10%;
+  margin-right: 10%;
   display: flex;
   justify-content: space-evenly;
+  flex-direction: column;
 }
 .scoreboard p {
   font-size: 28px;
   color: whitesmoke;
+}
+
+.scoreboard h2 {
+  align-self: center;
 }
 
 .player {
@@ -52,32 +60,61 @@ h3 {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  padding: 3%;
+  margin: 1%;
 }
 
+.round-result {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.picks {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  font-size: 28px;
+  color: whitesmoke;
+}
 /*Rules*/
 
 .rules {
+  background-color: rgb(97, 97, 97);
   display: flex;
   justify-content: space-evenly;
+  font-size: 32px;
 }
 
 /*Weapon selection*/
 
-.weapon-btn {
+.buttons {
+  padding: auto;
   display: flex;
   justify-content: space-evenly;
+  background-color: #cfcfcf;
 }
 
-.weap {
+.buttons img {
+  width: 150px;
+  height: auto;
+}
+
+.btn-square {
+  padding: 5px;
+  margin: 5px;
   background-color: #898989;
   border: 1px;
   border-radius: 5%;
   box-shadow: inset;
 }
 
-.weapon-btn img {
-  width: 150px;
-  height: auto;
+.btn-square:hover {
+  background-color: #bdbdbd;
+}
+
+.btn-square:active {
+  background: #ebebeb;
 }
 
 /*footer*/
@@ -86,4 +123,9 @@ h3 {
   margin-top: 4%;
   display: flex;
   justify-content: center;
+}
+
+.maingame {
+  display: flex;
+  flex-direction: column;
 }

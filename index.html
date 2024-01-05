@@ -1,59 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>AXE BOW WAND</title>
-  </head>
-  <body>
-    <main>
-      <div class="gamename"><h1>AXE BOW WAND</h1></div>
 
-      <div class="scoreboard">
-        <div class="player">
-          <h3>PLAYER</h3>
-          <p id="player">0</p>
-        </div>
-        <div class="player">
-          <p id="resultado"></p>
-        </div>
-        <div class="player">
-          <h3>CPU</h3>
-          <p id="cpu">0</p>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>AXE BOW WAND</title>
+</head>
+
+<body>
+  <main>
+    <div class="maingame">
+      <div class="gamename">
+        <h1>AXE BOW WAND</h1>
+      </div>
+      <div class="rules">
+        <h1>RULES</h1>
       </div>
       <div class="rules">
         <h3>Axe beats Wand</h3>
         <h3>Wand beats Bow</h3>
         <h3>Bow beats Axe</h3>
       </div>
-      <div class="weapon-btn">
-        <div class="weap">
-          <a href="#" onclick="game('Axe')">
-            <img src="./assets/Images/axe.png" alt="Image Button" />
-          </a>
-        </div>
-        <div class="weap">
-          <a href="#" onclick="game('Wand')">
-            <img src="./assets/Images/magic-wand.png" alt="Image Button" />
-          </a>
-        </div>
-        <div class="weap">
-          <a href="#" onclick="game('Bow')">
-            <img src="./assets/Images/bow-and-arrow.png" alt="Image Button" />
-          </a>
+      <div class="rules">
+        <h3>First to score 5, wins the game.</h3>
+      </div>
+      <div class="scoreboard">
+        <h2>SCOREBOARD</h2>
+        <div class="round-result">
+          <div id="playerWeapon" class="player">
+            <h3>PLAYER SCORE</h3>
+            <p id="player">0</p>
+          </div>
+          <div class="player">
+            <p id="resultado"></p>
+          </div>
+          <div id="cpuWeapon" class="player">
+            <h3>CPU SCORE</h3>
+            <p id="cpu">0</p>
+          </div>
         </div>
       </div>
-    </main>
+      <div class="gamename">
+        <h2>Choose your weapon</h2>
+      </div>
 
-    <footer class="footer">
-      <div>
-        <a href="https://www.flaticon.com/free-icons/bow" title="bow icons"
-          >Weapon icons created by Freepik - Flaticon</a
-        >
+      <div class="buttons">
+        <button id="axe-btn" class="btn-square">
+          <img src="./assets/Images/axe.png" alt="Image Button" />
+        </button>
+
+        <button id="wand-btn" class="btn-square">
+          <img src="./assets/Images/magic-wand.png" alt="Image Button" />
+        </button>
+
+        <button id="bow-btn" class="btn-square">
+          <img src="./assets/Images/bow-and-arrow.png" alt="Image Button" />
+        </button>
       </div>
-    </footer>
-    <script src="./js/scripts.js"></script>
-  </body>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <a href="https://www.flaticon.com/free-icons/bow" title="bow icons">Weapon icons created by Freepik - Flaticon</a>
+    </div>
+  </footer>
+  <script src="./js/scripts.js"></script>
+</body>
+
 </html>
