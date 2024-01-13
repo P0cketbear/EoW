@@ -64,6 +64,15 @@ h3 {
   margin: 1%;
 }
 
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 3%;
+  margin: 1%;
+}
+
 .round-result {
   display: flex;
   justify-content: space-between;

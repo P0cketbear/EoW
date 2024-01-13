@@ -158,7 +158,7 @@ function checkScore(playerScore, cpuScore) {
             axebtn.disabled = true;
             wandbtn.disabled = true;
             bowbtn.disabled = true;
-            document.querySelector('#resultado').appendChild(playA)
+            document.querySelector('.result').appendChild(playA)
         }
         playA.addEventListener('click', () => location.reload())
 
