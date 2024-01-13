@@ -136,22 +136,32 @@ function showPicks(playerWeapon, cpuWeapon) {
 
 function checkScore(playerScore, cpuScore) {
 
+    const playA = document.createElement('button');
+    playA.textContent = 'Play Again'
+
+
     if (playerScore === 5 || cpuScore === 5) {
-        let winner = '';
+        let won = false;
         if (playerScore === 5) {
-            winner = 'Player';
+            won = true;
+            document.querySelector('#resultado').style.color = 'green';
+            document.querySelector('#resultado').textContent = 'Player Wins the Game';
+
         } else {
-            winner = 'CPU';
+            won = true;
+            document.querySelector('#resultado').style.color = 'red';
+            document.querySelector('#resultado').textContent = 'CPU Wins the Game';
+
         }
 
-        const confirmation = confirm(winner + ' wins! Final score - Player: ' + playerScore + ', CPU: ' + cpuScore + ' Click OK to play again.');
-
-        if (confirmation) {
-
-            window.location.reload();
-        } else {
-            window.location.reload();
+        if (won) {
+            axebtn.disabled = true;
+            wandbtn.disabled = true;
+            bowbtn.disabled = true;
+            document.querySelector('#resultado').appendChild(playA)
         }
+        playA.addEventListener('click', () => location.reload())
+
     }
 
 }
